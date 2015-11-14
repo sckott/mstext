@@ -1,0 +1,153 @@
+\documentclass[author-year, review, 11pt]{components/elsarticle} %review=doublespace preprint=single 5p=2 column
+%%% Begin My package additions %%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+\usepackage{lineno} % add 
+  \linenumbers % turns line numbering on 
+\bibliographystyle{elsarticle-harv}
+\biboptions{sort&compress} % For natbib
+\usepackage{graphicx}
+\usepackage{booktabs} % book-quality tables
+%% Redefines the elsarticle footer
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \def\@oddfoot{\it \hfill\today}%
+ \let\@evenfoot\@oddfoot}
+\makeatother
+
+% A modified page layout
+\textwidth 6.75in
+\oddsidemargin -0.15in
+\evensidemargin -0.15in
+\textheight 9in
+\topmargin -0.5in
+%%%%%%%%%%%%%%%% end my additions to header
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={R clients for working with scholarly metadata and full text},
+            colorlinks=true,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+% Pandoc toggle for numbering sections (defaults to be off)
+\setcounter{secnumdepth}{0}
+% Pandoc header
+
+
+
+\begin{document}
+\begin{frontmatter}
+
+  \title{R clients for working with scholarly metadata and full text}
+    \author[cstar]{Scott Chamberlain\corref{c1}}
+   \ead{scott(at)ropensci.org} 
+   \cortext[c1]{Corresponding author}
+      \address[cstar]{University of California, Berkeley, CA, USA}    
+  
+  \begin{abstract}
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    xxx
+  \item
+    xxx
+  \item
+    xxx
+  \item
+    xxxx
+  \end{enumerate}
+  \end{abstract}
+  
+ \end{frontmatter}
+
+
+\section{Introduction}\label{introduction}
+
+xxxx
+
+\section{The packages}\label{the-packages}
+
+xxx
+
+\subsection{Package interface}\label{package-interface}
+
+xxx
+
+\subsubsection{fulltext}\label{fulltext}
+
+\subsubsection{rentrez}\label{rentrez}
+
+\subsubsection{rplos}\label{rplos}
+
+\subsubsection{rcrossref}\label{rcrossref}
+
+\section{Conclusions and future
+directions}\label{conclusions-and-future-directions}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  pt 1
+\item
+  pt 2
+\item
+  pt 3
+\item
+  pt 4
+\end{itemize}
+
+\section{Acknowledgements}\label{acknowledgements}
+
+This project was supported in part by the Alfred P Sloan Foundation
+(Grant 2013-6-22).
+
+\section{Data Accessibility}\label{data-accessibility}
+
+All scripts and data used in this paper can be found in the permanent
+data archive Zenodo under the digital object identifier (DOI). This DOI
+corresponds to a snapshot of the GitHub repository at
+\href{https://github.com/sckott/mstext}{github.com/sckott/mstext}.
+Software can be found at
+\href{https://github.com/ropensci/fulltext}{github.com/ropensci/fulltext},
+under the open and permissive MIT license.
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
+
+\end{document}
+
+

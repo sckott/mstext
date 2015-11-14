@@ -1,0 +1,99 @@
+---
+layout: review, 11pt
+linenumbers: true
+title: "R clients for working with scholarly metadata and full text"
+author:
+  - name: Scott Chamberlain
+    affiliation: cstar
+    email: scott(at)ropensci.org
+    footnote: Corresponding author
+address:
+  - code: cstar
+    address: |
+      University of California, Berkeley, CA, USA
+abstract: |
+      1. xxx
+
+      2. xxx
+
+      3. xxx
+
+      4. xxxx
+
+bibliography: components/references.bib
+csl: components/peerj.csl
+documentclass: components/elsarticle
+
+output:
+  pdf_document:
+    template: components/elsarticle.latex
+    keep_tex: true
+    fig_caption: true
+---
+
+
+```{r compile-settings, include=FALSE}
+library("methods")
+library("knitr")
+opts_chunk$set(
+  tidy = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = 1,
+  comment = '#>',
+  collapse = TRUE,
+  verbose = TRUE
+)
+basename <- gsub(".Rmd", "", knitr:::knit_concord$get('infile'))
+opts_chunk$set(fig.path = paste("components/figure/", basename, "-", sep=""),
+               cache.path = paste("components/cache/", basename, "/", sep=""))
+```
+
+# Introduction
+
+xxxx
+
+```{r echo=FALSE, results='hide', eval=FALSE}
+install.packages("fulltext", dependencies=TRUE)
+```
+
+```{r echo=FALSE, results='hide'}
+library("fulltext")
+```
+
+# The packages
+
+xxx
+
+## Package interface
+
+xxx
+
+### fulltext
+
+### rentrez
+
+### rplos
+
+### rcrossref
+
+# Conclusions and future directions
+
+* pt 1
+* pt 2
+* pt 3
+* pt 4
+
+# Acknowledgements
+
+This project was supported in part by the Alfred P Sloan
+Foundation (Grant 2013-6-22).
+
+# Data Accessibility
+
+All scripts and data used in this paper can be found in the permanent
+data archive Zenodo under the digital object identifier (DOI). This DOI corresponds to a snapshot of the GitHub repository at [github.com/sckott/mstext](https://github.com/sckott/mstext). Software can be found at [github.com/ropensci/fulltext](https://github.com/ropensci/fulltext), under the open and permissive MIT license.
+
+# References
+
+[mit]: http://choosealicense.com/licenses/mit/

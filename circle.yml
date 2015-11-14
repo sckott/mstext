@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+test:
+  override:
+    - docker run -ti -v $(pwd):/data -w /data rocker/ropensci r -e "rmarkdown::render('manuscript.Rmd')"
+  post:
+    - cp manuscript.pdf $CIRCLE_ARTIFACTS/
+
+# deployment:
+#   production:
+#     branch:
+#       - gh-pages
+#     commands:
+#       - bash git_deploy.sh
